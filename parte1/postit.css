@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body{
+ width: 100vw;
+ font-family: 'Indie Flower', cursive;
+ overflow: hidden;
+ 
+}
+.container{
+    height: 700px;
+    padding: 20px;
+    background-color: rgb(102,102,102) ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+@keyframes appear {
+    0%{  
+        opacity: 0;
+        scale: 100;
+        transform: translate(0,0);
+    }
+    100%{
+        opacity:1;
+        transform: scale(1);
+    }
+}
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    border: 1px solid transparent;
+    width:300px;
+    height: 250px;
+    margin: 10px;
+    box-shadow: 3px 2px 5px  black , 0px -15px 60px  rgb(135, 133, 133) inset;
+    z-index: 1;
+    animation: appear 3s linear 1;
+    position: relative;
+}
+.one,.five, .seven{
+    background-color: rgb(252,252,207);
+    transform: rotate(-7deg);
+}
+
+.three,.six{
+    background-color: rgb(194,195,233);
+    transform: rotate(-10deg);
+}
+.two,.four,.eight{
+    background-color: rgb(208,245,205);
+    transform: rotate(6deg);
+}
+article:hover{
+    scale: 1.25;
+    transform: rotate(0deg) ;
+    z-index: 2;
+    box-shadow: 5px 5px 10px  black ;
+}
+article h2{
+    font-size: 3em;
+}
+article p{
+    line-height: 1.5em;
+    align-self: flex-start;
+    padding-left: 70px;
+    font-size: 1.5em;
+}
