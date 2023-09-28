@@ -7,4 +7,54 @@
 6 animare le altre 2 parole
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+body{
+    font-family: 'Raleway', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    width: 600px;
+    border:2px solid gray;
+    padding: 50px;
+    line-height: 1.5em;
+    font-size: 2em;
+    position: relative;
+}
+.parole{
+    color: rgb(132, 162, 187);
+}
+i{
+    position: absolute;
+    left: 440px;
+    opacity: 0;
+    animation: appear 12s linear infinite 0s;
+}
 
+i:nth-of-type(2){
+    animation-delay: 4s;
+}
+i:nth-of-type(3){
+    animation-delay: 8s;
+}
+
+@keyframes appear {
+    0%{ opacity:0;
+        transform: translate(0px,-300px);
+    }
+    33%{ opacity:1;
+        transform: translate(0px,0px);     
+    }
+    66%{ opacity:0;
+        transform: translate(0px,0px);     
+    }
+    100%{ opacity:0;
+        transform: translate(0px,0px);     
+    }
+}
